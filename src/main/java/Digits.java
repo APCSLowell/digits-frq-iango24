@@ -19,13 +19,10 @@ public class Digits
 
 	public boolean isStrictlyIncreasing()
 	{ 
-		int low = digitList.get(0);
-		for(int i=0;i<digitList.size();i++){
-			if(digitList.get(i)<low){
+		for(int i=0;i<digitList.size()-1;i++){
+			if(digitList.get(i)>=digitList.get(i+1)){
 				return false;
-			}else{
-				low = digitList.get(i);
-			} 
+			}
 		}return true;
 	}
 
