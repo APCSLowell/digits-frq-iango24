@@ -6,13 +6,29 @@ public class Digits
 	private ArrayList<Integer> digitList;
 
 	public Digits(int num)
-	{ /* to be implemented in part (a) */ 
-	    
+	{ 
+          int count = 0;
+	  while (num>=9){
+		num=num/10;
+		count++;
+	  }
+	  int [] digitList = new int [count];
+	  for(int i=0;i<count;i++){
+		 digistList[i]=num%(10*i);
+	  }
 	}
 
 	public boolean isStrictlyIncreasing()
-	{ /* to be implemented in part (b) */
-		
+	{ 
+		int low = digitList[0];
+		for(int i=0;i<count;i++){
+			if(digitList[i]<low){
+				return false;
+			}else{
+				low = digitList[i];
+			} 
+		}return true;
+	}
 
 	}
 	
