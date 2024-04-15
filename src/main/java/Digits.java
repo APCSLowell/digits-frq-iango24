@@ -7,25 +7,19 @@ public class Digits
 
 	public Digits(int num)
 	{ 
-          int count = 0;
-	  while (num>=9){
-		num=num/10;
-		count++;
-	  }
-	  int [] digitList = new int [count];
 	  for(int i=0;i<count;i++){
-		 digistList[i]=num%(10*i);
+		 digitList[i].add(num%(10*i));
 	  }
 	}
 
 	public boolean isStrictlyIncreasing()
 	{ 
-		int low = digitList[0];
-		for(int i=0;i<digitList.length;i++){
-			if(digitList[i]<low){
+		int low = digitList.get(0);
+		for(int i=0;i<digitList.size();i++){
+			if(digitList.get(i)<low){
 				return false;
 			}else{
-				low = digitList[i];
+				low = digitList.get(i);
 			} 
 		}return true;
 	}
