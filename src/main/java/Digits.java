@@ -25,7 +25,6 @@ public class Digits
 			}
 		}return true;
 	}
-}
 
 	
 	
